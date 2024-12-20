@@ -1,14 +1,30 @@
 # React JS
-
 - A node module.
 - Creates web pages with JavaScript instead of HTML.
 - HTML web pages are static - they don't change.
 - JavaScript web pages are dynamic - they can change.
 
-### React preview 
--
--
+### Installation
+- `npm init`
+- `npm install react react-dom`
 
+### Setup
+1. Create `index.html` and add boilerplate tags.
+2. Create `index.js` and connect it to `index.html`: <script src="index.js" defer></script>. `defer` loads the script after the HTML file has rendered. 
+3. Import and use React package:
+   ```
+   import React from "react"
+   import { createRoot} from "react-dom/client";
+   ```
+   'createRoot` needs an HTML element.
+
+4. React renders the object into the specified root element. 
+
+### React preview 
+- Render plain HTML with React.
+- Output a variable.
+- Add a <button > with a click handler.
+- Add a <form> with a submit handler.npm 
 
 ```
 import React from "react";
@@ -16,7 +32,7 @@ import handleClick from "./utils/handleClick";
 import handleSubmit from "./utils/handleSubmit";
 
 const message = "Amazing world!";
-const root = createRoot (window.bodyTag);
+const root = createRoot(window.bodyTag);
 root.render(
 <main>
     <h1>Hello React</h1>
@@ -36,16 +52,6 @@ export default function handleSubmit(event = new Event()) {
     event.preventDefault();
     console.log(event);
 ```
-
-### Installation
-- `npm init`
-- `npm install react react-dom`
-
-### Setup
-1. Create `index.html` and add boilerplate tags.
-2. Create `index.js` and connect it to `index.html`: <script src="index.js" defer></script>.
-3. Import and use React packages.
-4. Try to render the program in the browser.
 
 ```
 <!DOCTYPE html>
@@ -105,7 +111,7 @@ root.render(<h1>Hello, world!</h1>);
 index.js.
 
 ### Installing Babel
-
+- `npm install --save-dev @babel/core @babel/cli`
 
 ### Babel command line
 - Provides instructions to the terminal for how to compile Babel with React
@@ -121,7 +127,7 @@ index.js.
 import { createRoot } from "react-dom/client";
 import React from "react";
 const root = createRoot (window.bodyTag) ;
-root.render(/*#__PURE_*/ React.createElement("h1", null, "Hello
+root.render(/*#__PURE_*/ React.createElement("h1", null, "Hello))
 ```
 
 ### React with Webpack and Babel
@@ -147,4 +153,8 @@ root.render(/*#__PURE_*/ React.createElement("h1", null, "Hello
 3. Make changes, re-compile with Babel, and re-bundle with Webpack.
 4. Render the React project in the browser.
 
-
+### Webpack and Babel
+1. `npm install babel-loader`
+2. Use Webpack file structure and make changes.
+3. npx webpack --module-rules-use babel-loader.
+4. Render the React project in the browser.
