@@ -146,7 +146,7 @@ root.render(/*#__PURE_*/ React.createElement("h1", null, "Hello))
 3. Run `npx webpack`.
 
 ### Babel configuration file
-- A configuration file can be used to specify compile instructions
+- A configuration file can be used to specify compile instructions.
   
 1. Create babel.config.json.
 2. Add "presets": [ "@babel/preset-react"].
@@ -154,7 +154,121 @@ root.render(/*#__PURE_*/ React.createElement("h1", null, "Hello))
 4. Render the React project in the browser.
 
 ### Webpack and Babel
+- A node module or package that allows for automation of babel compiling.
+- Gives Webpack the ability to compile with Babel.
+
 1. `npm install babel-loader`
 2. Use Webpack file structure and make changes.
-3. npx webpack --module-rules-use babel-loader.
+3. `npx webpack --module-rules-use babel-loader`
 4. Render the React project in the browser.
+
+### Configure Webpack to use Babel to compile
+-  A configuration file can be used to specify bundling instructions.
+  
+1. Create webpack.config.json file.
+2. Add a JSON object corresponding to `-module-rules-use babel-loader`.
+3. Make changes, save,  and then run `npx webpack`in the terminal.
+   
+```json
+{
+    "module":{
+         "rules": [
+            {
+            "use": "babel-loader"
+ }
+        ]
+    }
+}
+``` 
+### Webpack watching
+-  Webpack can watch for any changes to index.js.
+  
+   1. Run`npx webpack --watch`in the terminal.
+   2. Make changes. 
+   3. Render the React project in the browser.
+   4. Press CTRL + C to exit Webpack watcher.
+   
+### Configure Webpack to automatically watch for changes
+1. Edit  `webpack.config.json` file.
+2. Add `"watch": true`.
+3. Then run `npx webpack` in the terminal.
+   
+```json
+{
+    "module":{
+         "rules": [
+            {
+            "use": "babel-loader"
+         }
+        ]
+    },
+    "watch": true
+}
+```
+### Getting Started with React
+Exercise:
+Render plain HTML with React
+- Output a variable
+- Add a < button> with a click handler
+- Add a < form> with a submit handler
+Notes:
+```javascript
+<p>The message is: {message}</p>
+```
+- Use curly braces to escape to JavaScript
+- Extensions like `.js` are not necessary for the import statement anymore because webpack takes care of this by default
+- Event handlers are callback functions (without parentheses)
+- The event variable is automatically passed to event handlers
+
+### Webpack--Debugger mode
+`npx webpack--mode development`
+- By default, Webpack disables the debugger with production mode
+- To enable the debugger, set the mode to development
+- Exercise:
+  1. Try to use the debugger in production mode. 
+    - CTRL + C to exit watch mode
+  2. `npx webpack--mode development`
+  3. Now try to use the debugger
+
+###  Configure Webpack to automatically start in developer mode
+  1. Edit `webpack.config.json`
+  2. Add `"mode": "development"`
+  3. Save the file and then run`npx webpack` in the terminal
+     - [If this works, it will stop at the debugger.]
+
+### Webpack source map
+- Some code in the debugger might look different than the original code
+- A source map provides instructions how to convert the mangled code back to the original code
+1. Add an internal module to the code
+2. Start debugging and observe the internal module
+3. `npx webpack --devtool source-map`
+4. Debug and observe the internal module
+{
+    "module":{
+         "rules": [
+            {
+            "use": "babel-loader"
+         }
+        ]
+    },
+    "watch": true,
+    "mode": "development",
+    "devtool": "source-map"
+}
+
+### React package (add an Update to React Day 3 Notes)
+- React uses 2 packages:
+  1.  `react`-- The main react functions and classes
+    - Contains the methods for converting HTML into JavaScript
+  2.  `react-dom`--More functions and classes to use react
+    - Contains functions for manipulating the DOM
+    
+### DOM--Document Object Model
+  - Represents HTML as a tree of objects.
+  - Represented by the document object.
+  - The function `createRoot` is from `react-dom`.
+  - The function `createRoot` manipulates the DOM.
+
+### Embedding a YouTube video
+
+
