@@ -4,29 +4,13 @@
 - HTML web pages are static - they don't change.
 - JavaScript web pages are dynamic - they can change.
 
-### Installation
-- `npm init`
-- `npm install react react-dom`
-
-### Setup
-1. Create `index.html` and add boilerplate tags.
-2. Create `index.js` and connect it to `index.html`: <script src="index.js" defer></script>. `defer` loads the script after the HTML file has rendered. 
-3. Import and use React package:
-   ```
-   import React from "react"
-   import { createRoot} from "react-dom/client";
-   ```
-   'createRoot` needs an HTML element.
-
-4. React renders the object into the specified root element. 
-
 ### React preview 
 - Render plain HTML with React.
 - Output a variable.
 - Add a <button > with a click handler.
 - Add a <form> with a submit handler.npm 
 
-```
+```javascript
 import React from "react";
 import handleClick from "./utils/handleClick";
 import handleSubmit from "./utils/handleSubmit";
@@ -47,13 +31,14 @@ root.render(
 ) ;
 ```
 
-```
+```javascript
 export default function handleSubmit(event = new Event()) {
     event.preventDefault();
     console.log(event);
+}
 ```
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,21 +62,52 @@ export default function handleSubmit(event = new Event()) {
 </body>
 </html>
 ```
-
-
-```
+```javascript
 import { createRoot } from "react-dom/client";
 
 const root = createRoot(window.bodyTag);
 root.render(<h1>Hello, world!</h1>); 
 ```
 
+### Installation
+- React uses 2 packages:
+  1.  `react`-- The main react functions and classes
+    - Contains the methods for converting HTML into JavaScript
+  2.  `react-dom`--More functions and classes to use react
+    - Contains functions for manipulating the DOM
+
+- `npm init`
+- `npm install react react-dom`
+
+### DOM--Document Object Model
+  - Represents HTML as a tree of objects.
+  - Represented by the `document` object.
+  - The function `createRoot` is from `react-dom`.
+  - The function `createRoot` manipulates the DOM.
+
+### React setup
+
+```javascript
+import React from "react"
+import { createRoot} from "react-dom/client";
+
+const root = createRoot(window.bodyTag);
+root. render (<h1>Hello world!‹/h1>);
+ ```
+`createRoot` needs an HTML element.
+
+1. Create `index.html` and add boilerplate tags.
+2. Create `index.js` and connect it to `index.html`. 
+3. Import and use React package:
+4. React renders the object into the specified root element. 
+
 ### Using React with Webpack
 - React is an external module.
 - Webpack can make external modules work in the browser.
 - 
 1. Install webpack into the React workspace.
-2. Set up the Webpack folder structure `src/index.js`.
+2. Set up the Webpack folder structure `src/index.js`. <script src=".src/index.js" defer></script>.
+   -`defer` loads the script after the HTML file has rendered. 
 3. Let `index.html` use the `dist/main.js` instead.
 4. Try to render the program in the browser.
 
@@ -107,8 +123,9 @@ root.render(<h1>Hello, world!</h1>);
 
 ### Comping HTML to JavaScript
 - Copy the HTML and paste it into the Babel website.
-- Copy the compiled code into
-index.js.
+- Copy the compiled code into `index.js`.
+- Comment out the `import` lines for React.
+- Run `npx webpack`
 
 ### Installing Babel
 - `npm install --save-dev @babel/core @babel/cli`
@@ -123,13 +140,12 @@ index.js.
 4. Specify the output file `--out-file ./src/index.babel.js`.
 
 #### Index.js
-```
+```javascript
 import { createRoot } from "react-dom/client";
 import React from "react";
 const root = createRoot (window.bodyTag) ;
 root.render(/*#__PURE_*/ React.createElement("h1", null, "Hello))
 ```
-
 ### React with Webpack and Babel
 - Use the compiled Babel file with Webpack.
 - Updating changes can be tedious with the command line.
@@ -147,28 +163,30 @@ root.render(/*#__PURE_*/ React.createElement("h1", null, "Hello))
 
 ### Babel configuration file
 - A configuration file can be used to specify compile instructions.
+
+```json
+{ 
+    "presets": ["@babel/preset-react"]
+}
+``` 
   
-1. Create babel.config.json.
-2. Add "presets": [ "@babel/preset-react"].
+1. Create `babel.config.json`.
+2. Add `"presets": [ "@babel/preset-react"]`.
 3. Make changes, re-compile with Babel, and re-bundle with Webpack.
 4. Render the React project in the browser.
 
 ### Webpack and Babel
-- A node module or package that allows for automation of babel compiling.
-- Gives Webpack the ability to compile with Babel.
+- Webpack can be instructed to compile with Babel
 
 1. `npm install babel-loader`
-2. Use Webpack file structure and make changes.
+2. Use Webpack file structure and make changes
 3. `npx webpack --module-rules-use babel-loader`
-4. Render the React project in the browser.
 
 ### Configure Webpack to use Babel to compile
--  A configuration file can be used to specify bundling instructions.
-  
-1. Create webpack.config.json file.
-2. Add a JSON object corresponding to `-module-rules-use babel-loader`.
-3. Make changes, save,  and then run `npx webpack`in the terminal.
-   
+-  A configuration file can be used to specify bundling instructions
+   1. Create `webpack.config.json` file.
+   2. Add a JSON object corresponding to `-module-rules-use babel-loader`       
+   3. Make changes, save,  and then run `npx webpack`in the terminal
 ```json
 {
     "module":{
@@ -179,19 +197,19 @@ root.render(/*#__PURE_*/ React.createElement("h1", null, "Hello))
         ]
     }
 }
-``` 
-### Webpack watching
--  Webpack can watch for any changes to index.js.
-  
-   1. Run`npx webpack --watch`in the terminal.
-   2. Make changes. 
-   3. Render the React project in the browser.
-   4. Press CTRL + C to exit Webpack watcher.
+```
+
+### Webpack watch
+-  Webpack can watch for any changes to index.js
+   1. run`npx webpack --watch`in the terminal
+   2. Make changes 
+   3. Render the React project in the browser
+   4. Press CTRL + C to exit Webpack watcher
    
 ### Configure Webpack to automatically watch for changes
-1. Edit  `webpack.config.json` file.
-2. Add `"watch": true`.
-3. Then run `npx webpack` in the terminal.
+1. Edit  `webpack.config.json` file
+2. Add "watch": true
+3. then run `npx webpack` in the terminal
    
 ```json
 {
@@ -205,30 +223,26 @@ root.render(/*#__PURE_*/ React.createElement("h1", null, "Hello))
     "watch": true
 }
 ```
+
 ### Getting Started with React
 Exercise:
-Render plain HTML with React
-- Output a variable
-- Add a < button> with a click handler
-- Add a < form> with a submit handler
+- Render plain HTML with React.
+- Output a variable.
+- Add a <button> with a click handler.
+- Add a <form> with a submit handler.
+- 
 Notes:
-```javascript
-<p>The message is: {message}</p>
-```
-- Use curly braces to escape to JavaScript
-- Extensions like `.js` are not necessary for the import statement anymore because webpack takes care of this by default
-- Event handlers are callback functions (without parentheses)
-- The event variable is automatically passed to event handlers
+`<p>The message is: {message}</p>`
 
-### Webpack--Debugger mode
-`npx webpack--mode development`
-- By default, Webpack disables the debugger with production mode
+- Use curly braces to escape to JavaScript.
+- Extensions like `.js` are not necessary for the import statement anymore because webpack takes care of this by default.
+- Event handlers are callback functions (without parentheses).
+- The event variable is automatically passed to event handlers.
+
+### Debugger modes
+`npx webpack --mode development`
+- By default, webpack disables the debugger with production mode
 - To enable the debugger, set the mode to development
-- Exercise:
-  1. Try to use the debugger in production mode. 
-    - CTRL + C to exit watch mode
-  2. `npx webpack--mode development`
-  3. Now try to use the debugger
 
 ###  Configure Webpack to automatically start in developer mode
   1. Edit `webpack.config.json`
@@ -237,12 +251,14 @@ Notes:
      - [If this works, it will stop at the debugger.]
 
 ### Webpack source map
-- Some code in the debugger might look different than the original code
-- A source map provides instructions how to convert the mangled code back to the original code
-1. Add an internal module to the code
-2. Start debugging and observe the internal module
+- Some code in the debugger might look different than the original code.
+- A source map provides instructions how to convert the mangled code back to the original code.
+  ]
+1. Add an internal module to the code.
+2. Start debugging and observe the internal module.
 3. `npx webpack --devtool source-map`
-4. Debug and observe the internal module
+4. Debug and observe the internal module.
+```jsx
 {
     "module":{
          "rules": [
@@ -255,20 +271,773 @@ Notes:
     "mode": "development",
     "devtool": "source-map"
 }
-
-### React package (add an Update to React Day 3 Notes)
-- React uses 2 packages:
-  1.  `react`-- The main react functions and classes
-    - Contains the methods for converting HTML into JavaScript
-  2.  `react-dom`--More functions and classes to use react
-    - Contains functions for manipulating the DOM
-    
-### DOM--Document Object Model
-  - Represents HTML as a tree of objects.
-  - Represented by the document object.
-  - The function `createRoot` is from `react-dom`.
-  - The function `createRoot` manipulates the DOM.
+```
 
 ### Embedding a YouTube video
+1. Find a video from https://youtube.com.
+2. Click on the share icon.
+3. Copy the embed code with <iframe>.
+4. Paste it into the React project.
+
+### YouTube errors
+- camelCase the attributes
+- HTML attributes must be camelCase in React
+
+### iframe
+- Stands for inline frame.
+- Embeds code from one website to the current website.
+- An external web page is directly displayed in the current page.
+
+### Search Vimeo videos without an account
+https://vimeo.com/search
+
+### Browse TikTok videos without an account
+https://www.tiktok.com/foryou
+
+### Download videos from Pexels
+https://www.pexel.com/videos/
+
+### camelCase properties
+- HTML properties must be camelCase in React.
+
+### Embedding a Vimeo video
+1. Find a video from https://vimeo.com/search.
+2. Click on the Share icon.
+3. Copy the embed code with `‹iframe>`.
+4. Paste it into the React project.
+
+### Vimeo error and React inline styles
+- Uncaught Error: The 'style' prop expects a mapping from
+style properties to values, not a string. For example,
+style={{marginRight: spacing + 'em'}} when using JSX.`
+- Inline styles must be an object (not a string) in React
+
+1. Convert all the inline style strings into an object.
+2. Place quotes around CSS keywords and numbers with units.
+3. Fix the other errors.
+
+### JSX
+- Stands for JavaScript XML.
+- The syntax that looks like HTML, but JavaScript can be inserted into it.
+
+### Embedding a Twitch video
+1. Find a video from https://www.twitch.tv.
+2. Click on the Share icon.
+3. Copy the embed code with <iframe>.
+4. Paste it into the React project.
+
+### Twitch errors and Booleans
+- Received the string 'true' for the boolean attribute 'allowFullScreen.
+Although this works, it will not work as expected if you pass the string
+"false". Did you mean allowFullScreen={true}?
+-  The Boolean value must be escaped in React.
+- A Boolean value in quotes is invalid.
+  
+1. Fix the property casing errors with camelCase.
+2. Convert the string to Boolean by escaping it.
+
+### Editing the Twitch URL - this does not work for my video
+- Provide the parent or domain where the video is embedded
+Example: localhost
+Example: user.github.io
+
+- The domain in the browser address bar
+Example: localhost
+Example: 127.0.0.1
+Example: user.github.io
+
+### Embedding a TikTok video - I skipped this part 
+1. Find a video from https://www.tiktok.com/foryou.
+2. Click on the Share icon.
+3. Copy the embed code.
+4. Paste it into the React project.
+
+### TikTok errors and className - I skipped this part 
+- Invalid DOM property `class`. Did you mean `className`?
+-  The class attribute must be `className`.
+-  The keyword `class` is reserved for creating a JavaScript class
+
+1. Fix the class property error.
+
+### Styles with hyphen
+`max-width:"605px"`
+- Convert inline styles from string to object.
+- The dash is reserved for math subtraction.
+- Use camelCase instead.
+  
+### Embedding a local video
+```html
+<video src="assets\videos\5607991-uhd_3840_2160_30fps.mp4" controls width="500px"></video>
+```
+1. Find a video from https://www.pexels.com/videos.
+2. Create the folder `assets` next to `src`.
+3. Download the video to the `assets` folder.
+4. Set the `src` relative path and add `controls`.
+
+### React components
+- Created with a function that returns an HTML tag
+
+```javascript
+<MyGreeting/>
+import React from "react";
+
+export function MyGreeting () {
+    return (<section>
+        <h3>My Greeting</h3>
+        <p>Hello, world!</p>
+    </section>);
+}
+```
+- They are like custom HTML tags. 
+- They can contain or group together multiple HTML tags. 
+- The name of the component must start with a capital letter. 
+
+### React function components
+- Created with a function that returns an HTML tag
+```javascript
+import { useState } from "react";
+import React from "react";
+
+export function MyGreeting () {
+    // let greeting = "Hello, world!";
+    const myArray = useState("Amazing world!");
+    const greeting = myArray[0];
+    
+    const setGreeting = myArray[1];
+    setTimeout(changeGreeting,3000);
 
 
+    return (<section>
+        <h3>My Greeting</h3>
+        <p>{greeting}</p>
+    </section>);
+
+    function changeGreeting() {
+        // greeting ="Have a good day!";
+        setGreeting("Have a good day!");
+    };
+}
+```
+
+1. Create a `Views` folder in `src`.
+2. Create a module called `MyGreeting.js`.
+3. Let it export a function called `MyGreeting`.
+4. Let it return a <section> with nested HTML tags.
+5. Import and use it like a self closing HTML tag.
+
+### Variables vs state variables
+`let message = "Hello world!";`
+
+- Variables - contain values that aren't used for rendering.
+- State variables - contain values that affect what is rendered.
+
+### Rendering a variable
+1. Create a variable in `MyGreeting` and render its value.
+2. Change the value after 3 seconds with `setTimeout`.
+3. Add a debugger in the callback to verify.
+4. Check if the new value is rendered.
+
+### `useState`
+- State variables arecreated by the function ``useState``.
+- Returns an array with 2 items.
+- Position 0 is the value of the state variable.
+- Position 1 is the setter, a function that sets the value of the state variable.
+- The convention is to start it with `set` then the variable name.
+
+### Rendering a state variable
+1. In `MyGreeting`, create a stite variable with ``useState``.
+2. Extract the array items then render the state variable value.
+3. Change the value after 3 seconds with `setTimeout` and the setter.
+4. Check if the new value is rendered.
+5. Check how many times `setTimeout` is called.
+
+### Default value atrribute
+```jsx
+<input type="number" value="1" min="1" max="3"></input>
+<input type="number" defaultValue="1" min="1" max="3"></input>
+```
+- `value` is read-only and cannot be edited.
+- `defaultValue` prefills the field with the value and can be edited.
+- See `React Practice` for an example.
+
+ ### React fragment - empty tag
+```jsx
+<> 
+    <h1>Hello World!</h1>
+    <p>Have a nice day!</p>
+</>
+```
+- An empty tag that doesn't get rendered.
+- Can nest tags without using a `<div>`.
+  1. Use a `<div>` to group tags and view the element tree.
+  2. Use the empty tag and view the element tree.
+
+### Convert embedded videos to React function components
+1. Convert a YouTube embedded video
+2. Convert a Vimeo embedded video
+3. Convert a Twitch embedded video
+4. Convert a local video
+
+### Props (AKA: Properties)
+```jsx
+<YouTube src="https://www.youtube.com/embed"/>
+```
+- Props are the HTML attributes of a component.
+- Represented by an object, usually called props (short for properties).
+    1. Add an attribute and value to a component.
+    2. Access the attribute and value from inside the component.
+    3. Use the result.
+
+### Adding Bootstrap to React
+1. Insert the Bootstrap <link> to <head> in `index.html`
+2. Use Bootstrap classes in the JSX of React components.
+3. Use className (instead of class) for the element attribute.
+
+### Adding SASS to React
+1. Create a .scss file and add some styles.
+2. Use the extension Live Sass Compiler to convert.scss to .css.
+3. Use <link> in the < head> of index.html to connect the .css file.
+
+### Adding an image to React
+1. Put an image into the assets folder.
+2. Use the <img> tag with src as the relative path of the image.
+
+### Changing the width or height of an embedded video
+- Manually change the width or height of the <iframe >
+- Accept width or height as props, then put them in the ‹iframe>
+
+### How to use AI to keep proportions when changing the width
+- Ask the AI "If I change the width to 150, what should the height be if the original dimension is 100 width and 75 height?"
+
+### Benefits of using default exports
+- Simple import syntax without curly braces
+- Can use any name for the imported item
+
+### Benefits of using named exports
+- Can import multiple items from a file
+- Using the same names as the items prevents confusion
+
+### Automatically sizing a video based on the window area
+- Use the `vw` viewport width values. 
+- Sometimes this doesn't work well with <iframes>.
+- Resize an <iframe> based on vw (viewport width). The element size automatically adjusts to the window size.
+- 100vw makes the <iframe> size become much smaller than the viewport width.
+```jsx
+<div style={{ width: "100vw", height:"56.25vw"}}>
+<iframe width="100%" height="100%"/>
+</div>
+```
+  
+1. Set the <iframe> width and height to 100%. 
+2. Wrap a <div> around the <iframe>.
+3. Resize the <div> with vw.
+4. The <iframe> stretches to fill the <div>.
+
+### Resize an embedded video proportionally
+```jsx
+const dimension = {
+width: "100vw"
+height: "77.8vw"
+}
+
+<div style={dimensions}>
+```
+
+1. Instead of changing the <iframe>, put the frame in a new <div>. 
+2. Set the height to 100vw.
+3. Use trial and error.
+4. Or ask the AI what vw the height should be to maintain the proportions. The AI returns a calculation.
+5. Use the result of calculation as the React height value.
+6. Create a new style object. 
+7. Insert the style object into the new div. 
+
+### Review - HTML navigation
+```html
+<nav >
+<a href="index.html" >HOME</a>
+<a href="contact.html" >CONTACT</a>
+<a href="about.html" >ABOUT</a>
+</ nav>
+```
+- A ‹nav> tag groups <a > tags together
+- <a > tags link to different HTML files
+
+1. Add the `<></>` tag.
+2. Add the <header> tag.
+3. Add the <navbar> tag.
+4. Add the <a>nchor tags for the nav links, or whatever nav style. 
+
+### React navigation - how to link to other pages
+```jsx
+<nav>
+    <Link to="/home">HOME | </Link>
+    <Link to="/contact">CONTACT | </Link>
+    <Link to="/about">ABOUT | </Link>
+    <Link to="/videos">VIDEOS | </Link>
+</nav>
+```
+
+- Different than navigating with regular HTML.
+- Links to React components instead of HTML files.
+- `<Link>`tags are used instead of `<a>` tags.
+- The `to` prop is used instead of the `href` attribute.
+- Routes are defined instead of HTML files.
+
+### Routes
+`http://localhost:8080/contact`
+
+- Also known as paths.
+- The part of URL after the domain.
+- The route about is `/contact`.
+
+```jsx
+< BrowserRouter>
+< Routes>
+<Route path="/" element={<Home />}/>
+<Route path="/contact" element={<Contact />} />
+<Route path="/about" element={<About />} />
+</ Routes>
+</BrowserRouter>
+```
+
+- React needs to know what component to load for each path.
+- `<BrowserRouter>` component contains 1 `<Routes>` component.
+- The `<Routes>` component contains as many `<Route>` components as needed.
+- A `<Route>` defines a route and what component to load.
+
+1. Install react-router: `npm install react-router`.
+2. Use `<BrowserRouter>`, ‹Routes>, and ‹ Route> to define paths.
+3. Use `<Link>` to navigate to paths.
+
+### Single Page Application (SPAs)
+- React websites are usually SPAs (Single Page Applications).
+- React load sonly the parts of the page that changes.
+- Multi-page sites show a spinner when loading each page.
+- SPAs don't show a spinner when loading each page.
+
+1. View a multi-page website: `https://getbootstrap.com`.
+2. View an SPA: `https://react.dev`.
+3. Observe the spinner.
+
+- NOTE: With React you can go to different pages w/o needing to reload.
+- NOTE: you do not have to make a new page each time, only a new React component.
+
+### Virtual DOM
+- The DOM represents HTML as a tree of objects, and is represented by the `document` object. 
+- A virtual DOM is a copy of the actual DOM.
+1. First, React renders into a virtual DOM which is in memory, not in the browser.
+2. React comparies the virtual DOM to the actual DOM.
+3. React identifies the difference(s) between the virtual DOM and the actual DOM. 
+4. When there is a difference, it is considered a state change or update. React renders the difference(s) in the browser.
+- Instead of rendering the whole page all over again, the V-DOM keeps what was there and adds in the updates only as they occur. Updating only state changes can improve performance. 
+
+### Lifecycle of React function components
+- `Mount`: when the component is rendered for the first time. 
+- `Update`: when the component changes after it is rendered. NOTE: changing things w/o reloading the page.
+- `Unmount`: when the component is unrendered. NOTE: removing things w/o reloading the page.
+
+### Mount phase
+- When the component is rendered for the first time.
+- Use the debugger to understand the mount phase of the lifecycle:
+  
+    1. Place a debugger in a simple component.
+    2. Check when the HTML tags render into the element tree.
+
+### Live Server SPA compatiability for React
+- Live Server Extension by Ritwick Dey
+  
+#### Live Server › Settings > File: `index.html`
+- 
+#### Optional Live Server settings
+- `Live Server › Settings > Port`: 8080 
+- `Live Server › Settings > Host`: localhost 
+
+### Update phase
+- When the component changes after it is rendered.
+- Triggered by changing the value of a state variable.
+- Observe when the component changes after it is rendered.
+- The element tree highlights what has been changed. 
+
+1. Add a state variable and a debugger.
+2. Check when the HTML tags render into the element tree.
+3. Change the value fo the state variable after 3 seconds.
+4. The element tree highlights what has been changed.
+
+```jsx
+import React, { useState } from "react";
+import { Navbar } from "../utils/Navbar.js";
+
+export function MyGreeting() {
+	// let greeting = "Hello, world!";
+	const myArray = useState("Amazing world!");
+	const greeting = myArray[0];
+	const setGreeting = myArray[1];
+
+	setTimeout(changeGreeting, 3000);
+
+	return (
+		<>
+			<header>
+				<Navbar />
+			</header>
+			<section>
+				<h3>My Greeting</h3>
+				<p>{greeting}</p>
+			</section>
+		</>
+	);
+
+	function changeGreeting() {
+		// greeting ="Have a good day!";
+		setGreeting("Have a good day!");
+	}
+}
+```
+
+1. Add a state variable and a debugger.
+2. Check when the HTML tags render into the element tree.
+3. Change the value of the state variable after 3 seconds.
+4. The element tree highlights what has been changed.
+
+### Tuple
+```javascript
+const myTuple = useState("Hello world!");
+const greeting = myTuple[0];
+const setGreeting = myTuple[1];
+
+```
+- A tuple is an array with a fixed length and a fixed arrangement of items.
+- It will always have the same length.
+- It will always contain the same type of items.
+- A tuple is returned by `useState`.
+  - The 0 posiition is always the setter.
+  - The 1 position is always the value.
+
+1. Capture the result of `useState`.
+2. Let the result to look like an array with 2 variables in it.
+3. The 2 items from `useState` will be stored in the 2 variables.
+
+### Hooks
+`const [message,setMessage] = useState ("Hello World");`
+`useEffect(comonentDidUpdate)`
+
+- Functions that start with `use` are called hooks.
+- They hook into a component, extending its functionality.
+- `useState` gives a function the ability to store a state variable, which keeps its value even when the function is done.
+- `useEffect` gives the ability to track the component life cycle by running a callback.
+
+### Destructuring
+`const [greeting, setGreeting] = `useState`("Hello world!");`
+
+- A syntax that immediately extracts the items of a tuple.
+- The 0 posiition is always the setter.
+- The 1 position is always the value.
+  
+1. Capture the result of ``useState``.
+2. Change the result to look like an array with 2 variables in it.
+3. The 2 items from `useState` will be stored in the 2 variables.
+
+1.  Capture the result `myTuple` of `useState`.
+2.  Let the result `myTuple` to look like an array with 2 variables in it.
+3.  The 2 items from `useState` will be stores in the 2 variables.
+
+### useEffect
+`useEffect(componentDidUpdate);`
+
+- The `useEffect` hook gives a function the ability to track the component life cycle.
+- `useEffect` runs a callback when a component mounts and updates.
+- useEffect combines the mount and update phases:
+  - In a function component, the mount and update phases are combined.
+  - When the component mounts, componentDidUpdate is called.
+  - When the component updates, component DidUpdate is called.
+- See `MyGreeting` for an example. 
+  
+1. Create an inner function called `componentDidUpdate`.
+2. Add useEffect with the callback `componentDidUpdate`.
+3. Put a debugger in `componentDidUpdate`.
+
+### Code that updates should only be called within useEffect
+```jsx
+function componentDidUpdate() {
+setTimeout (changeMessage, 3000);
+}
+```
+
+1. Change the state variable from within `componentDidUpdate`.
+2. Use debugger to track the component life cycle.
+3. `componentDidUpdate` is part of the `useEffect` chain. 
+
+### How to tract the mount and update phases separately
+A state variable can be used to determine the exact phase.
+
+1. Add a state variable called `didMount` and set it to `false`.
+2. When `componentDidUpdate` is called, if `didMount` is false, then the component is in the mount phase. Set `didMount` to `true`.
+3.  When `componentDidUpdate` is called, if `didMount` is true, then the component is in the update phase.
+
+### useEffect dependencies
+`useEffect(componentDiUpdate, [greeting]);`
+
+- `useEffect` can be instructed to track specific variables when they update.
+- Use an array to list the state variables to keep track of.
+- Without the dependency list, useEffect tracks all state variables in the component.
+
+1. Add a dependency list to `useEffect`.
+2. Use a debugger to observe the difference a dependency list makes.
+
+### useEffect empty dependency list
+`useEffect(componentDidUpdate, []);`
+- When an empty dependency list is provided, the useEffect runs only once.
+
+1. Provide an empty dependency list for `useEffect`.
+2. Use a debugger to observe the difference an empty dependency list makes.
+
+### useEffect splitting
+`useEffect(componentDiUpdate, [greeting]);`
+`useEffect(componentDidUpdate, []);`
+- Multiple `useEffect` statements can be used in a single component.
+- Give callbacks a more specific purpose.
+
+1.  Create a useEffect to track the mount phase.
+2.  Create a useEffect to track the update phase.
+3.  Use a debugger to observe the difference.
+
+### Centering images or videos
+```javascript
+const center =
+width: "fit-content",
+justifySelf: "center"
+
+	<div style={{wdith:"fit-content", justifySelf:"center"}}>
+		<img
+		src="../assets/images/AdobeStock_739653522.jpeg" />
+	</div>
+```
+1. Wrap a <div> around the elements to center.
+2. Set the <div> width to "fit-content".
+3. Set the <div> justifySelf to "center".
+4. OPTIONAL: Set the <div> parent display to "grid".
+
+### Use asset paths relative to the dist folder
+- Webpack bundles your React code into the `dist` folder.
+- The `assets` folder is adjacent to the `dist` folder.
+- 
+1. Write `src` relative paths as if they start in the dist folder.
+2. <img src="../assets/picture.jpg"/>.
+
+Remember:
+`./ `= same folder
+`../`=back one folder 
+`../../`=back two folders
+
+### Unmount Phase
+- When the component is unrendered.
+- Navigating to another page will cause the previous page to unmount.
+  - NOTE: changing pages IS unrendering the component
+  
+```jsx
+function componentDidMount (){
+    return componentDidUnmount;
+}
+```
+### To track the unmount phase, return a callback function during the mount phase
+```jsx
+function componentDidMount () {
+return componentDidUnmount;
+}
+```
+1. Create an inner function called `componentDidUnmount`.
+2. Let `componentDidMount` return `componentDidUnmount`.
+3. Use a debugger to track when a component unmounts.
+4. Navigate to a different page component to unmount the current page component.
+
+### useEffect splitting
+```jsx
+useEffect ( componentDidMount, [] );
+useEffect( componentDidUpdate, [greeting] );
+useEffect ( componentDidUnmount, [] ) ;
+```
+1. Remove `componentDidUnmount` from `componentDidMount`.
+2. Create an inner function called `displayMessage`.
+3. Let `componentDidUnmount` return `displayMessage`.
+4. Use a `debugger` to track when a component unmounts.
+5. Navigate to a different page component to unmount the current page component.
+
+### Returning a function
+- A function can be returned by its name
+- A function can be returned by its definition
+
+```jsx
+function componentDidUnmount () {
+    debugger;
+    return function displayMessage(){
+        debugger;
+        console. log("component did unmount");
+    }
+}
+```
+1. Let `componentDidUnmount` return the function definition of `displayMessage`
+2. Use a `debugger` to track when a component unmounts
+3. Navigate to a different page component to unmount the current page component
+
+### Anonymous functions
+```jsx
+function componentDidUnmount () {
+return function {
+console. log("component did unmount");
+} ;
+}
+```
+- Function names are optional.
+- Can keep the function name to describe what the function does.
+
+1. Let `componentDidUnmount` return the function definition without a name.
+2. Use a debugger to track when a component unmounts.
+3. Navigate to a different page component to unmount the current page component.
+
+### Adding depth to an image or video
+```javascript
+const depth = {
+    borderRadius: "10px",
+    boxShadow: "10px 10px grey",
+}
+```
+1. Set the element `borderRadius` to "10px".
+2. Set the element `boxShadow` to "10px 10px grey".
+3. Change the numbers and colors as necesary.
+4. add `style={depth}` to the `<iframe>` where the video is embedded.
+
+### Component styles
+`import "./Home.scss";`
+
+- Components can import local style files.
+- Imported style files don't need to be manually linked to index.html.
+- Can create a style file per component.
+- Babel loader cannot compile CSS.
+
+### Install modules for importing component styles
+1. sass
+2. sass-loader
+3. css-loader
+4. style-loader
+
+### Configure Webpack for component styles
+```javascript
+export default {
+    //MODULES ARE CODE/FILES THAT ARE IMPORTED
+    module:{
+        //RULES ARE A LIST OF WAYS TO PROCESS THE MODULES
+         rules: [
+            {   
+                exclude: /\.(scss|css)/,  //DON'T COMPILE STYLE MODULES
+                use: "babel-loader",//USE THIS LOADER TO COMPILE ALL OTHER MODULES
+            },
+            {   
+                test: /\.(scss|css)/, //COMPILE STYLE NODULES
+                use: ["style-loader", "css-loader", "sass-loader"], //USE THESE LOADERS TO COMPLILE STYLE MODULES
+            },
+        ],
+    },
+    watch: true, //WATCH FOR CHANGES. PRESS CTRL+C TO CANCEL WATCH
+    watchOptions: { aggregateTimeout: 1000}, //GIVING WEBPACK MORE TIME TO COMPILE PREVENTS BUILD ERRORS
+    mode: "development", //ENABLES THE DEBUGGER
+    devtool: "source-map", //ENABLES DEBUGGER CODE TO MATCH ACTUAL CODE
+};
+```
+1. Rename `webpack.config.json` to `webpack.config.js` and add `export default` to the top.
+2. Add `{test: /\.(scss|css)/}`.
+3. Add `{use: [style-loader", "css-loader", "sass-loader"]} `.
+1. Add `exclude: /\.(scss|css)/` to the babel loader setting.
+2. Add descriptive comments.
+
+### Configure Webpack to avoid build errors
+`Uncaught Error: Module build failed`
+-   Webpack now needs more time to compile the project
+
+```javascript
+{watch: true,
+watchOptions: {aggregateTimeout: 1000},
+}
+```
+1.  `watchOptions: { aggregateTimeout: 1000}`
+2.  A a descriptive comment.
+
+### Component styles
+- <style> tags are dynamically added to the element tree.
+- Imported styles apply to all papps of the website.
+- The style-loader package adds the `<style>` to the files automatically.
+- Use class and id selectors for more specificity.
+  
+```css
+#homeTitle {
+	background-color: rgb(147, 147, 198);
+}
+
+.highlight {
+	background-color: yellow;
+}
+
+.center {
+	width: fit-content;
+	justify-self: center;
+}
+
+.depth {
+    border-radius: 10px;
+	box-shadow: 10px 10px grey;
+}
+```
+  
+1. Create component style files, separately for each component. 
+2. Any styling that you want to be global (used across the entire site), put it in the `index.scss` style file
+3. Other styling should be put in a style file specifically for the component (ex: Videos.scss) and then imported into that file (ex: Videos.js).
+4. . Import them.
+
+### Script tags in React
+- In React, `<script>` tags are only able to run 1 line of code.
+- Move code in `<script>` tags to `componentDidMount`.
+- Example: `imageMapResize ();`
+
+1. Add script to `index.html`: `<script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>`
+2. Create `ImageMap` component:
+  
+```jsx
+import React, { useEffect } from "react";
+
+export function ImageMap() {
+	useEffect(componentDidMount, []);
+	return (
+		<>
+			<header></header>
+			<main>
+				<img
+					// width=" 25%"
+					usemap="#my-image-map"
+					src="../assets/2d-shapes.jpg"
+					alt="shapes"
+				/>
+				<map name="my-image-map">
+					<area
+						title="Click the rectangle."
+						coords="195,70 365,170"
+						shape="rect"
+						href="https://www.oed.com/dictionary/rectangle_n?tab=factsheet#26289840"></area>
+					<area
+						title="Click here."
+						coords="609,116,56 "
+						shape="circle"
+						href="#circle"></area>
+					<area
+						title="Click me!"
+						coords="609,523, 635,509, 658,539, 636,579, 608, 602, 573,575, 564,563, 558, 528, 578, 509"
+						shape="poly"
+						href="http://google.com"></area>
+				</map>
+			</main>
+		</>
+	);
+
+	function componentDidMount() {
+		imageMapResize();
+	}
+}
+```
