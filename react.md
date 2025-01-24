@@ -517,7 +517,7 @@ export function MyGreeting () {
 - Can import multiple items from a file
 - Using the same names as the items prevents confusion
 
-### Automatically sizing a video based on the window area
+###  Tip: Automatically sizing a video based on the window area
 - Use the `vw` viewport width values. 
 - Sometimes this doesn't work well with <iframes>.
 - Resize an <iframe> based on vw (viewport width). The element size automatically adjusts to the window size.
@@ -533,7 +533,7 @@ export function MyGreeting () {
 3. Resize the <div> with vw.
 4. The <iframe> stretches to fill the <div>.
 
-### Resize an embedded video proportionally
+###  Tip: Resize an embedded video proportionally
 ```jsx
 const dimension = {
 width: "100vw"
@@ -801,7 +801,7 @@ A state variable can be used to determine the exact phase.
 2.  Create a useEffect to track the update phase.
 3.  Use a debugger to observe the difference.
 
-### Centering images or videos
+###  Tip: Centering images or videos
 ```javascript
 const center =
 width: "fit-content",
@@ -817,7 +817,7 @@ justifySelf: "center"
 3. Set the <div> justifySelf to "center".
 4. OPTIONAL: Set the <div> parent display to "grid".
 
-### Use asset paths relative to the dist folder
+###  Tip: Use asset paths relative to the dist folder
 - Webpack bundles your React code into the `dist` folder.
 - The `assets` folder is adjacent to the `dist` folder.
 - 
@@ -894,7 +894,7 @@ console. log("component did unmount");
 2. Use a debugger to track when a component unmounts.
 3. Navigate to a different page component to unmount the current page component.
 
-### Adding depth to an image or video
+###  Tip: Adding depth to an image or video
 ```javascript
 const depth = {
     borderRadius: "10px",
@@ -915,6 +915,8 @@ const depth = {
 - Babel loader cannot compile CSS.
 
 ### Install modules for importing component styles
+`> npm install sass sass-loader css-loader style-loader`
+
 1. sass
 2. sass-loader
 3. css-loader
@@ -1041,3 +1043,98 @@ export function ImageMap() {
 	}
 }
 ```
+
+### Tip: Styles with React
+```html
+<header id="homeHeader"></header>
+<main id="homeMain"></main>
+<footer id="homeFooter"></footer>
+```
+```css
+#homeMain {
+    h1 {
+        font-size: large;
+    }
+    .highlight {
+        background-color: yellow;
+    }
+}
+```
+
+- Add `id` to body sections
+- Use parent syntax for style specificity
+
+### Unmount phase
+```jsx
+const [video, setVideo] = useState(<YouTube />);
+```
+- A condition can cause a component to unmount.
+  
+1. Add `componentDidUnmount` to a component, indicating when it unmounts.
+2. In a different component, let a state variable store the previous component.
+3. Render the state variable.
+4. After a few seconds, store empty tags in the state variable.
+   
+### Tip: Getting elements by their id (the standard way)
+`window[outputTag].innerHTML += message;`
+`const myOutputElement = document.getElementById("myOutputTag");`
+
+- Accessing elements through the `window` object may not work on some browsers
+- The standard way of accessing elements is through the `document` object, NOT thru the window object
+- Use the method `document.getElementById` instead
+
+    1. Remove `window[elementid] ` from the `output` utility function
+    2. Standardize it with `document.getElementByld`
+
+```jsx
+export function output(
+    message = "",
+    outputTag = "outputTag",
+    shouldAppend = true
+) {
+    const outputElement = document.getElementById(outputTag);
+    if (shouldAppend) outputElement.innerHTML += message;
+    else outputElement.innerHTML += message;
+}
+```
+- It is better code to use the element that describes what you want it to do
+
+### Component feedback output
+`<output>{ message }</output>`
+- Use React to insert JSX feedback
+    1. Create a `state` variable `message` and store it in empty tags
+    2. Create a form to receive input
+    3. Create an inner function `handleSubmit` to handle the form submission
+    4. Let `handleSubmit` set `message` to JSX with feedback from the form
+ 
+ Example: OutputPractice.js
+ ```jsx
+ import React, { useState } from "react";
+ 
+ export function OutputPractice() {
+    const [message, setMessage] = useState(
+        <p>Hello OutputPractice Component!</p>
+    );
+    return (
+        <main>
+            <form onSubmit={handleSubmit}>
+                Enter some text:
+                <input />
+                <input type="submit" />
+            </form>
+            <output>{message}</output>;
+        </main>
+    );
+    function handleSubmit(event = new Event()) {
+        debugger;
+        event.preventDefault();
+        const inputs = event.target;
+        const textInput = inputs[0];
+        const userText = textInput.value;
+
+        setMessage(<p>You entered {userText}</p>);
+    }
+}
+```
+- React automatically calls handleSubmit and passes in the value of the event variable. If we do not name/store it in a variable, we will not be able to use the variable
+- useState returns a tuple, which is an array with a fixed # of items, in this case 2 items 

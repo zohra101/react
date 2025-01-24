@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // export function YouTube() {
 // 	return (
@@ -23,12 +23,14 @@ export function YouTube(props) {
 	const captions = props.children;
 	const dimensions = {
 		width: "100vw",
-		height: "56.25vw"
+		height: "56.25vw",
 	};
 	const depth = {
 		borderRadius: "10px",
 		boxShadow: "10px 10px grey",
 	};
+
+	useEffect(componentDidUnmount, []);
 
 	return (
 		<>
@@ -36,7 +38,7 @@ export function YouTube(props) {
 			<p>{captions}</p>
 			<div style={{ dimensions }}>
 				<iframe
-					style={ depth }
+					style={depth}
 					width="1152"
 					height="768"
 					src={src}
@@ -50,4 +52,10 @@ export function YouTube(props) {
 			</div>
 		</>
 	);
+
+	function componentDidUnmount() {
+		return function () {
+			console.log("YouTube component unmounted.");
+		};
+	}
 }
