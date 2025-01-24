@@ -1076,15 +1076,15 @@ const [video, setVideo] = useState(<YouTube />);
 4. After a few seconds, store empty tags in the state variable.
    
 ### Tip: Getting elements by their id (the standard way)
-`window[outputTag].innerHTML += message;`
-`const myOutputElement = document.getElementById("myOutputTag");`
+`window[outputTag].innerHTML += message;` (window object is non-standard)
+`const myOutputElement = document.getElementById("myOutputTag");`(document object is standard)
 
-- Accessing elements through the `window` object may not work on some browsers
-- The standard way of accessing elements is through the `document` object, NOT thru the window object
-- Use the method `document.getElementById` instead
+- Accessing elements through the `window` object may not work on some browsers.
+- The standard way of accessing elements is through the `document` object, NOT thru the window object.
+- Use the method `document.getElementById` instead.
 
-    1. Remove `window[elementid] ` from the `output` utility function
-    2. Standardize it with `document.getElementByld`
+    1. Remove `window[elementid] ` from the `output` utility function.
+    2. Standardize it with `document.getElementByld`.
 
 ```jsx
 export function output(
@@ -1097,15 +1097,17 @@ export function output(
     else outputElement.innerHTML += message;
 }
 ```
-- It is better code to use the element that describes what you want it to do
+- It is better code to use the element that describes what you want it to do.
 
 ### Component feedback output
 `<output>{ message }</output>`
-- Use React to insert JSX feedback
-    1. Create a `state` variable `message` and store it in empty tags
-    2. Create a form to receive input
-    3. Create an inner function `handleSubmit` to handle the form submission
-    4. Let `handleSubmit` set `message` to JSX with feedback from the form
+
+- Use React to insert JSX feedback.
+  
+    1. Create a `state` variable `message` and store it in empty tags.
+    2. Create a form to receive input.
+    3. Create an inner function `handleSubmit` to handle the form submission.
+    4. Let `handleSubmit` set `message` to JSX with feedback from the form.
  
  Example: OutputPractice.js
  ```jsx
@@ -1138,3 +1140,19 @@ export function output(
 ```
 - React automatically calls handleSubmit and passes in the value of the event variable. If we do not name/store it in a variable, we will not be able to use the variable
 - useState returns a tuple, which is an array with a fixed # of items, in this case 2 items 
+
+### Tip: Stop babel-loader from trying to compile non-JavaScript files
+
+`exclude: /\.(scss|css|otf|ttf|jpg|)/`
+`test: /\.js/`
+
+-   Add non-JavaScript files to the exclude list.
+-   Or add JavaScript files to the test list.
+-   The symbols are called RegEx, which stands for Regular Expression.
+
+### Tip: Downlading and installing fonts
+1. Go to https://www.dafont.com.
+2. download a font.
+3. unzip the font file.
+4. move the font file to the `asset` folder.
+5. see `Home.scss` for the demo.
