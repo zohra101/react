@@ -1044,7 +1044,7 @@ export function ImageMap() {
 }
 ```
 
-### Tip: Styles with React
+### Tip: Add id to < body> sections and use parent syntax for specificity
 ```html
 <header id="homeHeader"></header>
 <main id="homeMain"></main>
@@ -1156,3 +1156,51 @@ export function output(
 3. unzip the font file.
 4. move the font file to the `asset` folder.
 5. see `Home.scss` for the demo.
+
+### Tip: Standardize the React root element
+```jsx
+const root = createRoot (window.bodyTag);
+```
+- Use the `document` object to get the `root` element.
+- Don't use the `window` object to get the `root` element anymore.
+
+```jsx
+const bodyTag = document.getElementById("bodyTag");
+const root = createRoot (bodyTag);
+```
+
+### Tip: Import global styles wherever they are used
+`import "../index.scss";`
+
+-   Global styles are used by multiple components.
+-   Import global styles into each component that uses them.
+-   Provides a reference where styles are coming from.
+-   Styles from a file are only injected once into the DOM.
+  
+### Tip: Import asset paths into components
+`import src from "../../assets/picture.jpg"`
+-   Assets like pictures and videos can be imported.
+-   Webpack must be configured to allow this syntax.
+
+1.  In `webpack.config.js` add an object to `rules`.
+2.  `test: /\.(jpg|png|mp4)/`
+3.  `type: "asset/resource"`
+
+### Tip: Use the import variable
+`<img src={src}/>`
+
+-   The import variable stores the path to the object.
+-   Replace the asset path with the variable.
+  
+### Tip: Configure Webpack to fix build errors
+`Uncaught Error: Module parse failed:`
+- The asset loader may require more time to build.
+  
+1. Edit `watchOptions` in `webpack.config-js`.
+2. Update `aggregateTimeout: 2000`..
+3. Make changes to the project, like image width.
+4. Increase the timeout by 1s until build errors areresolved.
+
+
+
+
