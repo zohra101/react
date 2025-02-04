@@ -4,8 +4,8 @@ export default {
 		//RULES ARE A LIST OF WAYS TO PROCESS THE MODULES
 		rules: [
 			{
-				test: /\.js/,
-				exclude: /\.(scss|css|jpg|png|mp4|jpeg)/, //DON'T COMPILE STYLE MODULES
+				test: /\.(js)/,
+				exclude: /\.(scss|css|jpg|png|mp4|jpeg|otf|ttf)/, //DON'T COMPILE STYLE MODULES
 				use: "babel-loader", //USE THIS LOADER TO COMPILE ALL OTHER MODULES
 			},
 			{

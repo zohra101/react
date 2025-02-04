@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Navbar } from "../utils/Navbar.js";
+import { Navbar } from "../Views/Navbar.js";
 
 export function MyGreeting() {
 	const [greeting, setGreeting] = useState("Amazing world!");

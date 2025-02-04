@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Navbar } from "../utils/Navbar.js";
+import { Navbar } from "../Views/Navbar.js";
 import { YouTube } from "./YouTube.js";
 import { Vimeo } from "./Vimeo.js";
 // import { Twitch } from "./Twitch.js";

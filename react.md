@@ -1101,7 +1101,6 @@ export function output(
 
 ### Component feedback output
 `<output>{ message }</output>`
-
 - Use React to insert JSX feedback.
   
     1. Create a `state` variable `message` and store it in empty tags.
@@ -1201,6 +1200,107 @@ const root = createRoot (bodyTag);
 3. Make changes to the project, like image width.
 4. Increase the timeout by 1s until build errors areresolved.
 
+### Tip: Update the React template
+- Install useful packages
+- Add style and asset loaders to webpack.config.js
+- Add BrowserRouter to index.js
+- Add pages and Navbar to each page
+- Add Bootstrap to index.html
+- CTRL+F5 will reload the page
+- CTRL +D will allow you to select the same items simultaneaously
+  
+1. npm install _________
+   - sass
+   - sass-loader
+   - style-loader
+   - react-router
+2. converted `webpack.config.json` file to a Javascript (.js) file, then add the following rules:
+ ```javascript   
+    test: /\. js /, //COMPILE JS FILES 
+        
+    {
+               test: /\.(jpg|png|mp4)/,
+                //EXAMINE ASSET FILES
+               type: "asset-resource",
+                //SPECIFIES THAT THESE FILES
+                ARE ASSETS; THIS IS A BUILT IN FEATURE
+             },
+```
+3. added BrowserRouter to index.js
+4. added pages and a NavBar
+5. added Bootstrap to index.html
+6. `const domain = window.location.hostname` detects the domain where the page is rendering
+   - added to the NavBar component in React workspace
+7. Changed the routes based on the Domain
+   1. determine the domain
+   2. deternine the root path based on the domain
+   3. change <Link> based on root path
+   4. change <Route> based on root path
+8. Customize Bootstrap Carousel
+data-bs-target="#idName"
 
+### Detect where your page is rendering
+`const domain = window. location.hostname`
+- Your page renders on your local machine
+- Your page renders in GitHub
+- Use window.location.hostname to get the domain
 
+### Dynamically change routes based on the domain
+
+```js
+<Link to={`${rootPath}/`}>HOME
+<Link to={`${rootPath}/gallery`}>GALLERY
+<Link to={`${rootPath}/contact`}>CONTACT
+```
+
+-NOTE: only the opening tags were used so it's more readable
+- Useful for web hosting that change the root path, like GitHub
+
+1.  Determine the domain.
+2.  Determine the root path based on the domain.
+3.  Change `<Link>` based on the root path.
+4.  Change `<Route>` based on the root path.
+
+### Tip: Custom 404 error page on GitHub
+`404 File not Found`
+- The 404 error page on GitHub can be customized.
+- GitHub can automatically load `404.html`.
+1. Create a file called `404.html` next to `index.html`.
+2. Customize `404.html`.
+3. Push changes to GitHub.
+
+### Configure Live Server for SPAs
+   - load index.html on 404 errors
+   - NOTE: React is in main.js, which loads Browser Router, which then loads the page you want
+
+### Fix 404 errors for SPAs on Github
+   - NOTE: we don't directly load the 404 page; we just copy the contents of  the `index.html` page into `404.html` then push the changes to GitHub
+
+### Tip: Add tab titles for pages
+``` javascript
+const titleTag = document.getElementById("titleTag");
+titleTag.innerHTML = "React Workspace - Videos" ;|
+```
+``` javascript
+document.title = "React Workspace - Videos";*
+```
+- When a page mounts, set the tab title
+  
+1. add <title id="titleTag"></title> to the <head> of index.html
+2. add `document.title = "Page Title";` to componentDidMount
+3. Let `useEffect` track the mount phase.
+4. When the component mounts, set the `innerHTML` of the `title` tag or set `document.title`. The `id` of the title tag is not needed for `document.title`.
+
+- NOTE:after the component mounts, the elements in the element tree are then rendered
+
+### Automatically set the active class (for navbars) in React
+1. Convert `<Link>` to `<NavLink>`
+2. The `active` class is automatically added
+```js
+<nav>
+    <NavLink to={`${rootPath}/`}>Home</NavLink>
+    <NavLink to={`${rootPath}/about`}>About</NavLink>
+    <NavLink to={`${rootPath}/contact`}>Contact</NavLink>
+</nav>
+```
 

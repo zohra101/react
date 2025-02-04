@@ -1,14 +1,17 @@
 import React from "react";
-import { Navbar } from "../utils/Navbar.js";
+import { Navbar } from "../Views/Navbar.js";
 import { handleClick } from "../controllers/handleClick.js";
 import { handleSubmit } from "../controllers/handleSubmit.js";
 import "../css/Home.scss";
 // import { arch } from "../../assets/images/arch.jpeg";
-import { Carousel } from "./Carousel.js";
+import { Carousel } from "../Views/Carousel.js";
 
 export function Home() {
-const adjective = "easier";
-const message = `The command line is ${adjective} now.`;
+	const adjective = "easier";
+	const message = `The command line is ${adjective} now.`;
+
+	const domain = window.location.hostname;
+	console.log(`Domain: ${domain}`);
 
 	return (
 		<>
@@ -28,7 +31,7 @@ const message = `The command line is ${adjective} now.`;
 				<div>
 					<br></br>
 				</div>
-				<Carousel/>
+				<Carousel />
 				<output id="outputTag"></output>
 				<form onSubmit={handleSubmit}>
 					<input type="text"></input>

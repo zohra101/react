@@ -3,6 +3,7 @@ import arch from "../../assets/images/arch.jpeg";
 import cevapi from "../../assets/images/cevapi.jpg";
 import yoga from "../../assets/images/yogapier.jpeg";
 
+
 export function Carousel() {
 	return (
 		<div
