@@ -1270,11 +1270,11 @@ data-bs-target="#idName"
 3. Push changes to GitHub.
 
 ### Configure Live Server for SPAs
-   - load index.html on 404 errors
-   - NOTE: React is in main.js, which loads Browser Router, which then loads the page you want
+   - Load `index.html` on 404 errors.
+   - NOTE: React is in `main.j`s, which loads `Browser Router`, which then loads the page you want.
 
 ### Fix 404 errors for SPAs on Github
-   - NOTE: we don't directly load the 404 page; we just copy the contents of  the `index.html` page into `404.html` then push the changes to GitHub
+   - Don't directly load the 404 page; copy the contents of the `index.html` page into `404.html` then push the changes to GitHub.
 
 ### Tip: Add tab titles for pages
 ``` javascript
