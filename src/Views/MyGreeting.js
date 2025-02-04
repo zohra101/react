@@ -12,7 +12,9 @@ export function MyGreeting() {
 
 	return (
 		<>
-			<Navbar />
+			<header>
+				<Navbar />
+			</header>
 			<main>
 				<h3>My Greeting</h3>
 				<p>{greeting}</p>
@@ -44,9 +46,8 @@ export function MyGreeting() {
 	}
 
 	function componentDidUnmount() {
-		return function displayMessage () {
-		console.log("The component unmounted.");
-		}
+		return function displayMessage() {
+			console.log("The component unmounted.");
+		};
 	}
-	
 }

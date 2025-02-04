@@ -6,8 +6,10 @@ export function Domain() {
 	const port = window.location.port;
 	return (
 		<>
-			<main>
+			<header>
 				<Navbar />
+			</header>
+			<main>
 				<h1>Domain</h1>
 				<p>domain: {domain}</p>
 				<p>port: {port}</p>

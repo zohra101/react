@@ -4,7 +4,9 @@ export function ImageMap() {
 	useEffect(componentDidMount, []);
 	return (
 		<>
-			<header></header>
+			<header>
+				<Navbar />
+			</header>
 			<main>
 				<img
 					// width=" 25%"

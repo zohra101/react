@@ -2608,25 +2608,25 @@ __webpack_require__.r(__webpack_exports__);
 
 function Carousel() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    id: "carouselExampleIndicators",
+    id: "testCarousel",
     className: "carousel slide"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "carousel-indicators"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     type: "button",
-    "data-bs-target": "#carouselExampleIndicators",
+    "data-bs-target": "#testCarousel",
     "data-bs-slide-to": "0",
     className: "active",
     "aria-current": "true",
     "aria-label": "Slide 1"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     type: "button",
-    "data-bs-target": "#carouselExampleIndicators",
+    "data-bs-target": "#testCarousel",
     "data-bs-slide-to": "1",
     "aria-label": "Slide 2"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     type: "button",
-    "data-bs-target": "#carouselExampleIndicators",
+    "data-bs-target": "#testCarousel",
     "data-bs-slide-to": "2",
     "aria-label": "Slide 3"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -2652,7 +2652,7 @@ function Carousel() {
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "carousel-control-prev",
     type: "button",
-    "data-bs-target": "#carouselExampleIndicators",
+    "data-bs-target": "#testCarousel",
     "data-bs-slide": "prev"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "carousel-control-prev-icon",
@@ -2662,7 +2662,7 @@ function Carousel() {
   }, "Previous")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "carousel-control-next",
     type: "button",
-    "data-bs-target": "#carouselExampleIndicators",
+    "data-bs-target": "#testCarousel",
     "data-bs-slide": "next"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "carousel-control-next-icon",
@@ -2691,7 +2691,7 @@ __webpack_require__.r(__webpack_exports__);
 function Domain() {
   const domain = window.location.hostname;
   const port = window.location.port;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Views_Navbar_js__WEBPACK_IMPORTED_MODULE_1__.Navbar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Domain"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "domain: ", domain), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "port: ", port)));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Views_Navbar_js__WEBPACK_IMPORTED_MODULE_1__.Navbar, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Domain"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "domain: ", domain), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "port: ", port)));
 }
 
 /***/ }),
@@ -2757,7 +2757,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function ImageMap() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(componentDidMount, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Navbar, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     // width=" 25%"
     usemap: "#my-image-map",
     src: "../assets/2d-shapes.jpg",
@@ -2834,7 +2834,7 @@ function MyGreeting() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(componentDidMount, []);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(componentDidUpdate, [greeting]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(componentDidUnmount, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Views_Navbar_js__WEBPACK_IMPORTED_MODULE_1__.Navbar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "My Greeting"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, greeting)));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Views_Navbar_js__WEBPACK_IMPORTED_MODULE_1__.Navbar, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "My Greeting"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, greeting)));
   function changeGreeting() {
     setGreeting("Have a good day!");
   }
@@ -2882,8 +2882,6 @@ __webpack_require__.r(__webpack_exports__);
 function Navbar() {
   const rootPath = (0,_modules_getRootPath_js__WEBPACK_IMPORTED_MODULE_1__.getRootPath)();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: `${rootPath}/`
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: `${rootPath}/home`
   }, "HOME | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: `${rootPath}/greeting`
@@ -2915,7 +2913,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function OutputPractice() {
   const [message, setMessage] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("Hello Output Practice!");
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Views_Navbar_js__WEBPACK_IMPORTED_MODULE_1__.Navbar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Views_Navbar_js__WEBPACK_IMPORTED_MODULE_1__.Navbar, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
     onSubmit: handleSubmit
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Select an option:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
     title: "dropdown"
@@ -3144,14 +3142,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   getRootPath: () => (/* binding */ getRootPath)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Views_Domain_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Views/Domain.js */ "./src/Views/Domain.js");
-
-
 function getRootPath() {
   const domain = window.location.hostname;
   let rootPath = "";
+  console.log(domain);
   if (domain === "zohra101.github.io") rootPath = "/capstone-level-3";
+  console.log(rootPath);
 }
 
 /***/ }),
@@ -13627,13 +13623,15 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-K6AXKMTT.mjs");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-K6AXKMTT.mjs");
 /* harmony import */ var _Views_Home_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Views/Home.js */ "./src/Views/Home.js");
 /* harmony import */ var _Views_Videos_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Views/Videos.js */ "./src/Views/Videos.js");
 /* harmony import */ var _Views_MyGreeting_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Views/MyGreeting.js */ "./src/Views/MyGreeting.js");
 /* harmony import */ var _Views_ImageMap_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Views/ImageMap.js */ "./src/Views/ImageMap.js");
 /* harmony import */ var _Views_OutputPractice_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Views/OutputPractice.js */ "./src/Views/OutputPractice.js");
 /* harmony import */ var _Views_Domain_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Views/Domain.js */ "./src/Views/Domain.js");
+/* harmony import */ var _src_modules_getRootPath_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../src/modules/getRootPath.js */ "./src/modules/getRootPath.js");
+
 
 
 
@@ -13647,31 +13645,29 @@ __webpack_require__.r(__webpack_exports__);
 // const root = createRoot(window.bodyTag);
 const bodyTag = document.getElementById("bodyTag");
 const root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__.createRoot)(bodyTag);
-
-// const message = `You've reached this page because the page you were expecting is not available. Please contact the site administrator for assistance.`;
-
-root.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
-  path: "/",
+const rootPath = (0,_src_modules_getRootPath_js__WEBPACK_IMPORTED_MODULE_8__.getRootPath)();
+root.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
+  path: `${rootPath}/`,
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Views_Home_js__WEBPACK_IMPORTED_MODULE_2__.Home, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
-  path: "/home",
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
+  path: `${rootPath}/home`,
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Views_Home_js__WEBPACK_IMPORTED_MODULE_2__.Home, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
-  path: "/videos",
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
+  path: `${rootPath}/videos`,
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Views_Videos_js__WEBPACK_IMPORTED_MODULE_3__.Videos, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
-  path: "/greeting",
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
+  path: `${rootPath}/greeting`,
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Views_MyGreeting_js__WEBPACK_IMPORTED_MODULE_4__.MyGreeting, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
-  path: "/imagemap",
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
+  path: `${rootPath}/imagemap`,
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Views_ImageMap_js__WEBPACK_IMPORTED_MODULE_5__.ImageMap, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
-  path: "/outputPractice",
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
+  path: `${rootPath}/outputPractice`,
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Views_OutputPractice_js__WEBPACK_IMPORTED_MODULE_6__.OutputPractice, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
-  path: "/domain",
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
+  path: `${rootPath}/domain`,
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Views_Domain_js__WEBPACK_IMPORTED_MODULE_7__.Domain, null)
-})))));
+}))));
 })();
 
 /******/ })()

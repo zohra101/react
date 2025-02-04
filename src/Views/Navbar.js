@@ -16,7 +16,6 @@ export function Navbar() {
 				<Link to="/outputPractice">OUTPUT PRACTICE | </Link>
 				<Link to="/domain">DOMAIN </Link> */}
 
-				<Link to={`${rootPath}/`}></Link>
 				<Link to={`${rootPath}/home`}>HOME | </Link>
 				<Link to={`${rootPath}/greeting`}>GREETING | </Link>
 				<Link to={`${rootPath}/videos`}>VIDEOS | </Link>

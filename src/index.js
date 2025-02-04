@@ -7,50 +7,44 @@ import { MyGreeting } from "./Views/MyGreeting.js";
 import { ImageMap } from "./Views/ImageMap.js";
 import { OutputPractice } from "./Views/OutputPractice.js";
 import { Domain } from "./Views/Domain.js";
-
+import { getRootPath } from "../src/modules/getRootPath.js";
 
 // const root = createRoot(window.bodyTag);
 const bodyTag = document.getElementById("bodyTag");
 const root = createRoot(bodyTag);
-
-// const message = `You've reached this page because the page you were expecting is not available. Please contact the site administrator for assistance.`;
+const rootPath = getRootPath();
 
 root.render(
-	<>
 		<BrowserRouter>
 			<Routes>
 				<Route
-					path="/"
+					path={`${rootPath}/`}
 					element={<Home />}
 				/>
 				<Route
-					path="/home"
+					path={`${rootPath}/home`}
 					element={<Home />}
 				/>
 				<Route
-					path="/videos"
+					path={`${rootPath}/videos`}
 					element={<Videos />}
 				/>
 				<Route
-					path="/greeting"
+					path={`${rootPath}/greeting`}
 					element={<MyGreeting />}
 				/>
 				<Route
-					path="/imagemap"
+					path={`${rootPath}/imagemap`}
 					element={<ImageMap />}
 				/>
 				<Route
-					path="/outputPractice"
+					path={`${rootPath}/outputPractice`}
 					element={<OutputPractice />}
 				/>
 				<Route
-					path="/domain"
+					path={`${rootPath}/domain`}
 					element={<Domain />}
 				/>
 			</Routes>
 		</BrowserRouter>
-		{/* <main>
-			<p>{message}</p>
-		</main> */}
-	</>
 );

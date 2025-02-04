@@ -5,37 +5,39 @@ import { Navbar } from "../Views/Navbar.js";
 export function OutputPractice() {
 	const [message, setMessage] = useState("Hello Output Practice!");
 
-		return (
-			<>
+	return (
+		<>
+			<header>
 				<Navbar />
-				<main>
-					<form onSubmit={handleSubmit}>
+			</header>
+			<main>
+				<form onSubmit={handleSubmit}>
 					{/* <form> */}
-						<div>
-							Select an option:
-							<br />
-							<select title="dropdown">
-								<option>multiple</option>
-								<option>boolean</option>
-							</select>
-						</div>
+					<div>
+						Select an option:
 						<br />
-						<div>
-							Pick a number:
-							<br />
-							<input
-								type="number"
-								defaultValue="1"
-								min="1"
-								max="3"></input>
-							<br />
-						</div>
-						<input type="submit"></input>
-					</form>
-					<output>{message}</output>
-				</main>
-			</>
-		);
+						<select title="dropdown">
+							<option>multiple</option>
+							<option>boolean</option>
+						</select>
+					</div>
+					<br />
+					<div>
+						Pick a number:
+						<br />
+						<input
+							type="number"
+							defaultValue="1"
+							min="1"
+							max="3"></input>
+						<br />
+					</div>
+					<input type="submit"></input>
+				</form>
+				<output>{message}</output>
+			</main>
+		</>
+	);
 
 	function handleSubmit(event = new Event()) {
 		event.preventDefault();
@@ -44,11 +46,13 @@ export function OutputPractice() {
 		const userText = textInput.value;
 		const numberInput = inputs[1];
 		const userNumber = numberInput.value;
-	    setMessage(
-				<>
-					<p>"Hello Output Practice!"</p>
-					<p>You entered {userText}, {userNumber}.</p>
-				</>
-			);
+		setMessage(
+			<>
+				<p>"Hello Output Practice!"</p>
+				<p>
+					You entered {userText}, {userNumber}.
+				</p>
+			</>
+		);
 	}
 }
