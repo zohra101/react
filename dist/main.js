@@ -2883,15 +2883,11 @@ function Navbar() {
   const rootPath = (0,_modules_getRootPath_js__WEBPACK_IMPORTED_MODULE_1__.getRootPath)();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: `${rootPath}/`
-  }, "HOME"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: `${rootPath}/home`
   }, "HOME | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: `${rootPath}/greeting`
   }, "GREETING | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: `${rootPath}/contact`
-  }, "CONTACT | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: `${rootPath}/about`
-  }, "ABOUT | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: `${rootPath}/videos`
   }, "VIDEOS | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: `${rootPath}/outputPractice`
@@ -3149,8 +3145,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   getRootPath: () => (/* binding */ getRootPath)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _Views_Domain_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Views/Domain.js */ "./src/Views/Domain.js");
 
-function getRootPath() {}
+
+function getRootPath() {
+  const domain = window.location.hostname;
+  let rootPath = "";
+  if (domain === "zohra101.github.io") rootPath = "/capstone-level-3";
+}
 
 /***/ }),
 
