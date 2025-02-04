@@ -7,7 +7,7 @@ import { MyGreeting } from "./Views/MyGreeting.js";
 import { ImageMap } from "./Views/ImageMap.js";
 import { OutputPractice } from "./Views/OutputPractice.js";
 import { Domain } from "./Views/Domain.js";
-} 
+
 
 // const root = createRoot(window.bodyTag);
 const bodyTag = document.getElementById("bodyTag");
