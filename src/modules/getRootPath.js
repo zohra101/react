@@ -8,5 +8,6 @@ export function getRootPath() {
         rootPath = "/capstone-level-3";
 
     console.log(rootPath);
+    return rootPath;
 
 }

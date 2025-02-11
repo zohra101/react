@@ -1,3 +1,4 @@
+// USE DEFAULT IMPORTS (INSTEAD OF NAMED IMPORTS) FOR ASSETS
 import React, { useEffect } from "react";
 
 export function ImageMap() {
@@ -10,6 +11,7 @@ export function ImageMap() {
 			<main>
 				<img
 					// width=" 25%"
+					id="shapes"
 					usemap="#my-image-map"
 					src="../assets/2d-shapes.jpg"
 					alt="shapes"
@@ -36,6 +38,12 @@ export function ImageMap() {
 	);
 
 	function componentDidMount() {
-		imageMapResize();
+		// Select the image by id
+		const img = document.getElementById("shapes");
+
+		// If the image exists and the imageMapResize function is available, apply the resize logic
+		if (img && window.imageMapResize) {
+			imageMapResize();
+		}
 	}
 }

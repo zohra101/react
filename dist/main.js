@@ -2558,141 +2558,13 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./assets/images/arch.jpeg":
-/*!*********************************!*\
-  !*** ./assets/images/arch.jpeg ***!
-  \*********************************/
+/***/ "./assets/images/archcopy.png":
+/*!************************************!*\
+  !*** ./assets/images/archcopy.png ***!
+  \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "d303388161fd43e8bfba.jpeg";
-
-/***/ }),
-
-/***/ "./assets/images/cevapi.jpg":
-/*!**********************************!*\
-  !*** ./assets/images/cevapi.jpg ***!
-  \**********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "7f50a0e1dff50aec28eb.jpg";
-
-/***/ }),
-
-/***/ "./assets/images/yogapier.jpeg":
-/*!*************************************!*\
-  !*** ./assets/images/yogapier.jpeg ***!
-  \*************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "17d3931de072f91d49a7.jpeg";
-
-/***/ }),
-
-/***/ "./src/Views/Carousel.js":
-/*!*******************************!*\
-  !*** ./src/Views/Carousel.js ***!
-  \*******************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Carousel: () => (/* binding */ Carousel)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _assets_images_arch_jpeg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../assets/images/arch.jpeg */ "./assets/images/arch.jpeg");
-/* harmony import */ var _assets_images_cevapi_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/images/cevapi.jpg */ "./assets/images/cevapi.jpg");
-/* harmony import */ var _assets_images_yogapier_jpeg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/images/yogapier.jpeg */ "./assets/images/yogapier.jpeg");
-
-
-
-
-function Carousel() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    id: "testCarousel",
-    className: "carousel slide"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "carousel-indicators"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    type: "button",
-    "data-bs-target": "#testCarousel",
-    "data-bs-slide-to": "0",
-    className: "active",
-    "aria-current": "true",
-    "aria-label": "Slide 1"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    type: "button",
-    "data-bs-target": "#testCarousel",
-    "data-bs-slide-to": "1",
-    "aria-label": "Slide 2"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    type: "button",
-    "data-bs-target": "#testCarousel",
-    "data-bs-slide-to": "2",
-    "aria-label": "Slide 3"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "carousel-inner"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "carousel-item active"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: _assets_images_cevapi_jpg__WEBPACK_IMPORTED_MODULE_2__,
-    className: "d-block w-100",
-    alt: "cevapi"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "carousel-item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: _assets_images_yogapier_jpeg__WEBPACK_IMPORTED_MODULE_3__,
-    className: "d-block w-100",
-    alt: "yoga"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "carousel-item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: _assets_images_arch_jpeg__WEBPACK_IMPORTED_MODULE_1__,
-    className: "d-block w-100",
-    alt: "arch"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    className: "carousel-control-prev",
-    type: "button",
-    "data-bs-target": "#testCarousel",
-    "data-bs-slide": "prev"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: "carousel-control-prev-icon",
-    "aria-hidden": "true"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: "visually-hidden"
-  }, "Previous")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    className: "carousel-control-next",
-    type: "button",
-    "data-bs-target": "#testCarousel",
-    "data-bs-slide": "next"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: "carousel-control-next-icon",
-    "aria-hidden": "true"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: "visually-hidden"
-  }, "Next")));
-}
-
-/***/ }),
-
-/***/ "./src/Views/Domain.js":
-/*!*****************************!*\
-  !*** ./src/Views/Domain.js ***!
-  \*****************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Domain: () => (/* binding */ Domain)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Views_Navbar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Views/Navbar.js */ "./src/Views/Navbar.js");
-
-
-function Domain() {
-  const domain = window.location.hostname;
-  const port = window.location.port;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Views_Navbar_js__WEBPACK_IMPORTED_MODULE_1__.Navbar, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Domain"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "domain: ", domain), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "port: ", port)));
-}
+module.exports = __webpack_require__.p + "2084432913c3a2a6aea1.png";
 
 /***/ }),
 
@@ -2711,26 +2583,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _controllers_handleClick_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../controllers/handleClick.js */ "./src/controllers/handleClick.js");
 /* harmony import */ var _controllers_handleSubmit_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../controllers/handleSubmit.js */ "./src/controllers/handleSubmit.js");
 /* harmony import */ var _css_Home_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../css/Home.scss */ "./src/css/Home.scss");
-/* harmony import */ var _Views_Carousel_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Views/Carousel.js */ "./src/Views/Carousel.js");
+/* harmony import */ var _assets_images_archcopy_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../assets/images/archcopy.png */ "./assets/images/archcopy.png");
+// USE DEFAULT IMPORTS (INSTEAD OF NAMED IMPORTS) FOR ASSETS
 
 
 
 
 
-// import { arch } from "../../assets/images/arch.jpeg";
+
+// import { Carousel } from "../Views/Carousel.js";
 
 function Home() {
+  debugger;
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(componentDidMount, []);
   const adjective = "easier";
   const message = `The command line is ${adjective} now.`;
   const domain = window.location.hostname;
   console.log(`Domain: ${domain}`);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Views_Navbar_js__WEBPACK_IMPORTED_MODULE_1__.Navbar, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+  console.log(`Arch path: ${_assets_images_archcopy_png__WEBPACK_IMPORTED_MODULE_5__}`);
+  debugger;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", {
+    id: "homeHeader"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Views_Navbar_js__WEBPACK_IMPORTED_MODULE_1__.Navbar, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", {
+    id: "homeMain"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
     id: "homeTitle"
-  }, "React is awesome."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+  }, "React is awesome."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    style: {
+      width: "fit-content",
+      justifySelf: "center",
+      resize: "none"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    id: "archTag",
+    src: _assets_images_archcopy_png__WEBPACK_IMPORTED_MODULE_5__
+    // data-bs-title="A picture of an arch"
+    // data-bs-toggle="tooltip"
+    ,
+    width: "75% !important"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "highlight"
   }, "The message is: ", message), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     onClick: _controllers_handleClick_js__WEBPACK_IMPORTED_MODULE_2__.handleClick
-  }, "Click"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Views_Carousel_js__WEBPACK_IMPORTED_MODULE_5__.Carousel, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("output", {
+  }, "Click"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("output", {
     id: "outputTag"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
     onSubmit: _controllers_handleSubmit_js__WEBPACK_IMPORTED_MODULE_3__.handleSubmit
@@ -2739,6 +2634,14 @@ function Home() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     type: "submit"
   }))));
+}
+function componentDidMount() {
+  document.getElementById("archTag");
+  console.log(archTag);
+  // 	document.getElementById("titleTag");
+  // 	titleTag.innerHTML = "Home";
+  // 	const imgTag = document.getElementById("archJpeg");
+  // new bootstrap.Tooltip(imgTag);
 }
 
 /***/ }),
@@ -2754,11 +2657,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   ImageMap: () => (/* binding */ ImageMap)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+// USE DEFAULT IMPORTS (INSTEAD OF NAMED IMPORTS) FOR ASSETS
 
 function ImageMap() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(componentDidMount, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Navbar, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     // width=" 25%"
+    id: "shapes",
     usemap: "#my-image-map",
     src: "../assets/2d-shapes.jpg",
     alt: "shapes"
@@ -2781,7 +2686,13 @@ function ImageMap() {
     href: "http://google.com"
   }))));
   function componentDidMount() {
-    imageMapResize();
+    // Select the image by id
+    const img = document.getElementById("shapes");
+
+    // If the image exists and the imageMapResize function is available, apply the resize logic
+    if (img && window.imageMapResize) {
+      imageMapResize();
+    }
   }
 }
 
@@ -2874,24 +2785,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Navbar: () => (/* binding */ Navbar)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-K6AXKMTT.mjs");
-/* harmony import */ var _modules_getRootPath_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/getRootPath.js */ "./src/modules/getRootPath.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-K6AXKMTT.mjs");
 
 
+// import { getRootPath } from "../modules/getRootPath.js";
 
 function Navbar() {
-  const rootPath = (0,_modules_getRootPath_js__WEBPACK_IMPORTED_MODULE_1__.getRootPath)();
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: `${rootPath}/home`
-  }, "HOME | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: `${rootPath}/greeting`
-  }, "GREETING | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: `${rootPath}/videos`
-  }, "VIDEOS | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: `${rootPath}/outputPractice`
-  }, "OUTPUT PRACTICE | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: `${rootPath}/domain`
-  }, "DOMAIN ")));
+  // const rootPath = getRootPath();
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: "/home"
+  }, "HOME | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: "/greeting"
+  }, "GREETING | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: "/contact"
+  }, "CONTACT | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: "/about"
+  }, "ABOUT | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: "/videos"
+  }, "VIDEOS | ")));
 }
 
 /***/ }),
@@ -2948,13 +2859,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Videos: () => (/* binding */ Videos)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Views_Navbar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Views/Navbar.js */ "./src/Views/Navbar.js");
-/* harmony import */ var _YouTube_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./YouTube.js */ "./src/Views/YouTube.js");
-/* harmony import */ var _Vimeo_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Vimeo.js */ "./src/Views/Vimeo.js");
-/* harmony import */ var _LocalVideo_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./LocalVideo.js */ "./src/Views/LocalVideo.js");
-/* harmony import */ var _css_Videos_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../css/Videos.scss */ "./src/css/Videos.scss");
-
+/* harmony import */ var _Views_Navbar_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Views/Navbar.js */ "./src/Views/Navbar.js");
+/* harmony import */ var _YouTube_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./YouTube.js */ "./src/Views/YouTube.js");
+/* harmony import */ var _Vimeo_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Vimeo.js */ "./src/Views/Vimeo.js");
+/* harmony import */ var _LocalVideo_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./LocalVideo.js */ "./src/Views/LocalVideo.js");
+/* harmony import */ var _css_Videos_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../css/Videos.scss */ "./src/css/Videos.scss");
+// USE DEFAULT IMPORTS (INSTEAD OF NAMED IMPORTS) FOR ASSETS
+// import React, { useEffect, useState } from "react";
 
 
 
@@ -2962,27 +2873,29 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Videos() {
-  const [video, setVideo] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_YouTube_js__WEBPACK_IMPORTED_MODULE_2__.YouTube, {
+  const [video, setVideo] = useState(/*#__PURE__*/React.createElement(_YouTube_js__WEBPACK_IMPORTED_MODULE_1__.YouTube, {
     label: "How to Win at Splendor",
     src: "https://www.youtube.com/embed/lYIdqDcoPiA?si=uc8pvhJ63CaScAZE"
   }));
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(componentDidMount, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Views_Navbar_js__WEBPACK_IMPORTED_MODULE_1__.Navbar, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", {
+  useEffect(componentDidMount, []);
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("header", null, /*#__PURE__*/React.createElement(_Views_Navbar_js__WEBPACK_IMPORTED_MODULE_0__.Navbar, null)), /*#__PURE__*/React.createElement("main", {
     id: "videos"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "VIDEOS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LocalVideo_js__WEBPACK_IMPORTED_MODULE_4__.LocalVideo, {
+  }, /*#__PURE__*/React.createElement("h2", null, "VIDEOS"), /*#__PURE__*/React.createElement(_LocalVideo_js__WEBPACK_IMPORTED_MODULE_3__.LocalVideo, {
     label: "Dolphins",
     src: "../assets/videos/5607991-uhd_3840_2160_30fps.mp4"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), video, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("script", {
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("br", null)), video, /*#__PURE__*/React.createElement("script", {
     src: "https://player.vimeo.com/api/player.js"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Vimeo_js__WEBPACK_IMPORTED_MODULE_3__.Vimeo, {
+  }), /*#__PURE__*/React.createElement(_Vimeo_js__WEBPACK_IMPORTED_MODULE_2__.Vimeo, {
     label: "Rajasthani Dance",
     src: "https://player.vimeo.com/video/267034685?badge=0&autopause=0&player_id=0&app_id=58479"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null))));
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("br", null))));
   function componentDidMount() {
     setTimeout(hideVideo, 3000);
+    document.getElementById("titleTag");
+    titleTag.innerHTML = "Videos";
   }
   function hideVideo() {
-    setVideo(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null));
+    setVideo(/*#__PURE__*/React.createElement(React.Fragment, null));
   }
 }
 
@@ -3132,26 +3045,6 @@ function handleSubmit() {
 
 /***/ }),
 
-/***/ "./src/modules/getRootPath.js":
-/*!************************************!*\
-  !*** ./src/modules/getRootPath.js ***!
-  \************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getRootPath: () => (/* binding */ getRootPath)
-/* harmony export */ });
-function getRootPath() {
-  const domain = window.location.hostname;
-  let rootPath = "";
-  console.log(domain);
-  if (domain === "zohra101.github.io") rootPath = "/capstone-level-3";
-  console.log(rootPath);
-}
-
-/***/ }),
-
 /***/ "./src/utils/output.js":
 /*!*****************************!*\
   !*** ./src/utils/output.js ***!
@@ -3172,6 +3065,7 @@ __webpack_require__.r(__webpack_exports__);
 //  }
 
 function output(message = "", outputTag = "outputTag", shouldAppend = true) {
+  debugger;
   const outputElement = document.getElementById(outputTag);
   if (shouldAppend) outputElement.innerHTML += message;else outputElement.innerHTML += message;
 }
@@ -13623,14 +13517,12 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-K6AXKMTT.mjs");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-K6AXKMTT.mjs");
 /* harmony import */ var _Views_Home_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Views/Home.js */ "./src/Views/Home.js");
 /* harmony import */ var _Views_Videos_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Views/Videos.js */ "./src/Views/Videos.js");
 /* harmony import */ var _Views_MyGreeting_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Views/MyGreeting.js */ "./src/Views/MyGreeting.js");
 /* harmony import */ var _Views_ImageMap_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Views/ImageMap.js */ "./src/Views/ImageMap.js");
 /* harmony import */ var _Views_OutputPractice_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Views/OutputPractice.js */ "./src/Views/OutputPractice.js");
-/* harmony import */ var _Views_Domain_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Views/Domain.js */ "./src/Views/Domain.js");
-/* harmony import */ var _src_modules_getRootPath_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../src/modules/getRootPath.js */ "./src/modules/getRootPath.js");
 
 
 
@@ -13639,34 +13531,30 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
+// import { Domain } from "./Views/Domain.js";
+// import { getRootPath } from "../src/modules/getRootPath.js";
+// import { ActiveNavbar } from "./Views/ActiveNavbar.js";
 
 // const root = createRoot(window.bodyTag);
 const bodyTag = document.getElementById("bodyTag");
 const root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__.createRoot)(bodyTag);
-const rootPath = (0,_src_modules_getRootPath_js__WEBPACK_IMPORTED_MODULE_8__.getRootPath)();
-root.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
-  path: `${rootPath}/`,
+// const rootPath = getRootPath();
+
+root.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_7__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_7__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  path: "/",
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Views_Home_js__WEBPACK_IMPORTED_MODULE_2__.Home, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
-  path: `${rootPath}/home`,
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  path: "/home",
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Views_Home_js__WEBPACK_IMPORTED_MODULE_2__.Home, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
-  path: `${rootPath}/videos`,
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  path: "/videos",
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Views_Videos_js__WEBPACK_IMPORTED_MODULE_3__.Videos, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
-  path: `${rootPath}/greeting`,
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  path: "/greeting",
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Views_MyGreeting_js__WEBPACK_IMPORTED_MODULE_4__.MyGreeting, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
-  path: `${rootPath}/imagemap`,
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  path: "/imagemap",
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Views_ImageMap_js__WEBPACK_IMPORTED_MODULE_5__.ImageMap, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
-  path: `${rootPath}/outputPractice`,
-  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Views_OutputPractice_js__WEBPACK_IMPORTED_MODULE_6__.OutputPractice, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
-  path: `${rootPath}/domain`,
-  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Views_Domain_js__WEBPACK_IMPORTED_MODULE_7__.Domain, null)
 }))));
 })();
 

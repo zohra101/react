@@ -1293,6 +1293,14 @@ document.title = "React Workspace - Videos";*
 
 - NOTE:after the component mounts, the elements in the element tree are then rendered
 
+### Review - Bootstrap navbar
+`<a class="active nav-link">`
+- Some Bootstrap navbars require the `active` class
+- With HTML sites, the `active` class is set with each HTML file
+- In React, there is usually only 1 `<Navbar>` component
+
+1. Create new component called `ActiveNavBar.js`
+
 ### Automatically set the active class (for navbars) in React
 1. Convert `<Link>` to `<NavLink>`
 2. The `active` class is automatically added
@@ -1303,4 +1311,52 @@ document.title = "React Workspace - Videos";*
     <NavLink to={`${rootPath}/contact`}>Contact</NavLink>
 </nav>
 ```
+### Tip: Automatic code formatting and indentation
 
+- Prettier can automatically format code, but it may require manual configuration.
+
+1.  Open a new VS Code window (without a project)
+2.  Access the global settings file.
+3.  Add `"editor.defaultFormatter": "esbnp.prettier-vscode",`
+4.  Add `"editor.formatOnSave": true,`
+
+### Tip: Debug with VS Code instead of Dev Tools
+
+1.  Open a new VS Code window (without a project) to access global settings.
+2.  `Menu > Run > Add Configuration > Chrome: Launch`.
+3.  Change the `name` to `"VS Code Debugger"`.
+4.  Change the `url` to your server.
+5.  Disable Live Server from automatically opening a browser.
+
+### Tip: Global header and footer
+- A `header` and `footer` can be inserted into `BrowserRouter`
+- The `header` and `footer` will be rendered with all pages
+1. Create `<Header />` and `<Footer />`
+2. Insert `<Header />` before `<Routes />`
+3. Insert `<Footer />` after `<Routes />`
+
+Example: 
+```javascript
+    <BrowserRouter>
+        <Header />
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            </Route>
+        </Routes>
+        <Footer />
+    </BrowserRouter >
+```
+
+### Tip: Pass extra variables to handlers
+```js
+function handleSubmit(event) {
+  handleSignIn(event, setErrorMessage);
+}
+```
+
+1. Create the controller `handleSignIn.js`
+2. In `SignInModal`, move the contents of `handleSubmit` to `handleSignIn.js`
+3. Let `handleSubmit` call `handleSignIn` with the variables it needs
+4. Update the parameters in `handleSignIn. js`

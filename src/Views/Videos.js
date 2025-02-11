@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+// USE DEFAULT IMPORTS (INSTEAD OF NAMED IMPORTS) FOR ASSETS
+// import React, { useEffect, useState } from "react";
 import { Navbar } from "../Views/Navbar.js";
 import { YouTube } from "./YouTube.js";
 import { Vimeo } from "./Vimeo.js";
@@ -10,8 +11,7 @@ export function Videos() {
 	const [video, setVideo] = useState(
 		<YouTube
 			label="How to Win at Splendor"
-			src="https://www.youtube.com/embed/lYIdqDcoPiA?si=uc8pvhJ63CaScAZE">
-		</YouTube>
+			src="https://www.youtube.com/embed/lYIdqDcoPiA?si=uc8pvhJ63CaScAZE"></YouTube>
 	);
 
 	useEffect(componentDidMount, []);
@@ -48,6 +48,8 @@ export function Videos() {
 
 	function componentDidMount() {
 		setTimeout(hideVideo, 3000);
+		document.getElementById("titleTag");
+		titleTag.innerHTML = "Videos";
 	}
 
 	function hideVideo() {

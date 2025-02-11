@@ -4,6 +4,7 @@ import { Navbar } from "../Views/Navbar.js";
 export function Domain() {
 	const domain = window.location.hostname;
 	const port = window.location.port;
+	
 	return (
 		<>
 			<header>
