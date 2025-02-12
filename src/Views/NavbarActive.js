@@ -7,9 +7,9 @@ export function NavbarActive() {
 	return (
 		<>
 			<nav className="nav nav-tabs nav-fill bg-secondary">
-				{/* <NavLink
+				<NavLink
 					className="nav-link"
-					to={`${rootPath}/`}></NavLink> */}
+					to={`${rootPath}/`}></NavLink>
 				<NavLink
 					className="nav-link text-info"
 					to={`${rootPath}/home`}>
