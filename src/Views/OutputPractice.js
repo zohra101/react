@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Navbar } from "../Views/Navbar.js";
+import { NavbarActive } from "../Views/NavbarActive.js";
 
 export function OutputPractice() {
 	const [message, setMessage] = useState("Hello Output Practice!");
@@ -8,7 +8,7 @@ export function OutputPractice() {
 	return (
 		<>
 			<header>
-				<Navbar />
+				<NavbarActive />
 			</header>
 			<main>
 				<form onSubmit={handleSubmit}>

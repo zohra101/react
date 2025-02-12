@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Navbar } from "../Views/Navbar.js";
+import { NavbarActive } from "../Views/NavbarActive.js";
 
 export function MyGreeting() {
 	const [greeting, setGreeting] = useState("Amazing world!");
@@ -13,7 +13,7 @@ export function MyGreeting() {
 	return (
 		<>
 			<header>
-				<Navbar />
+				<NavbarActive />
 			</header>
 			<main>
 				<h3>My Greeting</h3>
@@ -27,7 +27,6 @@ export function MyGreeting() {
 	}
 
 	function componentDidMount() {
-		debugger;
 		setDidMount(true);
 		console.log("The component mounted. The greeting is " + greeting);
 		setTimeout(changeGreeting, 3000);

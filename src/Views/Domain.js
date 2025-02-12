@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar } from "../Views/Navbar.js";
+import { NavbarActive } from "../Views/NavbarActive.js";
 
 export function Domain() {
 	const domain = window.location.hostname;
@@ -8,7 +8,7 @@ export function Domain() {
 	return (
 		<>
 			<header>
-				<Navbar />
+				<NavbarActive />
 			</header>
 			<main>
 				<h1>Domain</h1>

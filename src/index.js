@@ -4,47 +4,19 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import { Home } from "./Views/Home.js";
 import { Videos } from "./Views/Videos.js";
 import { MyGreeting } from "./Views/MyGreeting.js";
-import { ImageMap } from "./Views/ImageMap.js";
-import { OutputPractice } from "./Views/OutputPractice.js";
-// import { Domain } from "./Views/Domain.js";
-// import { getRootPath } from "../src/modules/getRootPath.js";
-// import { ActiveNavbar } from "./Views/ActiveNavbar.js";
+import { Domain } from "./Views/Domain.js";
+import { getRootPath } from "../src/utils/getRootPath.js";
+import { ResponsiveDesign } from "./Views/ResponsiveDesign.js";
 
 // const root = createRoot(window.bodyTag);
 const bodyTag = document.getElementById("bodyTag");
 const root = createRoot(bodyTag);
-// const rootPath = getRootPath();
+const rootPath = getRootPath();
 
 
 root.render(
 	<BrowserRouter>
 		<Routes>
-			<Route
-				path="/"
-				element={<Home />}
-			/>
-			<Route
-				path="/home"
-				element={<Home />}
-			/>
-			<Route
-				path="/videos"
-				element={<Videos />}
-			/>
-			<Route
-				path="/greeting"
-				element={<MyGreeting />}
-			/>
-			<Route
-				path="/imagemap"
-				element={<ImageMap />}
-			/>
-			{/* <Route
-				path="/outputPractice"
-				element={<OutputPractice />}
-			/> */}
-		</Routes>
-		{/* <Routes>
 			<Route
 				path={`${rootPath}/`}
 				element={<Home />}
@@ -61,22 +33,22 @@ root.render(
 				path={`${rootPath}/greeting`}
 				element={<MyGreeting />}
 			/>
-			<Route
+			{/* <Route
 				path={`${rootPath}/imagemap`}
 				element={<ImageMap />}
-			/>
-			<Route
+			/> */}
+			{/* <Route
 				path={`${rootPath}/outputPractice`}
 				element={<OutputPractice />}
 			/> */}
-			{/* <Route
+			<Route
 				path={`${rootPath}/domain`}
 				element={<Domain />}
-			/> */}
-			{/* <Route
-				path="/activenavbar"
-				element={<ActiveNavbar />}
-			/> */}
-		{/* </Routes> */}
+			/>
+			<Route
+				path={`${rootPath}/responsive`}
+				element={<ResponsiveDesign />}
+			/>
+		</Routes>
 	</BrowserRouter>
 );

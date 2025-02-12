@@ -1,6 +1,6 @@
 // USE DEFAULT IMPORTS (INSTEAD OF NAMED IMPORTS) FOR ASSETS
-// import React, { useEffect, useState } from "react";
-import { Navbar } from "../Views/Navbar.js";
+import React, { useEffect, useState } from "react";
+import { NavbarActive } from "../Views/NavbarActive.js";
 import { YouTube } from "./YouTube.js";
 import { Vimeo } from "./Vimeo.js";
 // import { Twitch } from "./Twitch.js";
@@ -8,18 +8,17 @@ import { LocalVideo } from "./LocalVideo.js";
 import "../css/Videos.scss";
 
 export function Videos() {
-	const [video, setVideo] = useState(
+	const [video, setVideo] = useState(<YouTube/>);
 		<YouTube
 			label="How to Win at Splendor"
 			src="https://www.youtube.com/embed/lYIdqDcoPiA?si=uc8pvhJ63CaScAZE"></YouTube>
-	);
 
-	useEffect(componentDidMount, []);
+	// useEffect(componentDidMount, []);
 
 	return (
 		<>
 			<header>
-				<Navbar />
+				<NavbarActive />
 			</header>
 			<main id="videos">
 				<h2>VIDEOS</h2>
@@ -46,13 +45,13 @@ export function Videos() {
 		</>
 	);
 
-	function componentDidMount() {
-		setTimeout(hideVideo, 3000);
-		document.getElementById("titleTag");
-		titleTag.innerHTML = "Videos";
-	}
+	// function componentDidMount() {
+	// 	setTimeout(hideVideo, 3000);
+	// 	// document.getElementById("titleTag");
+	// 	// titleTag.innerHTML = "Videos";
+	// }
 
-	function hideVideo() {
-		setVideo(<></>);
-	}
+	// function hideVideo() {
+	// 	setVideo(<></>);
+	// }
 }

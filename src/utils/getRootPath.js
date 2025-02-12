@@ -2,12 +2,12 @@ export function getRootPath() {
     const domain = window.location.hostname;
     let rootPath="";
 
-    console.log(domain);
+    console.log(`getRootPath domain: ${domain}`);
 
     if (domain === "zohra101.github.io")
         rootPath = "/capstone-level-3";
 
-    console.log(rootPath);
+    console.log(`getRootpath: ${rootPath}`);
     return rootPath;
 
 }

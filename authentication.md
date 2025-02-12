@@ -64,7 +64,6 @@ export function authenticationSimulation(email = "", password = "") {
 }
 ```
 ### Authentication Simulation - setup
-
 - Verify that the email and password in the form are in the list of logins.
 
 1.  Create the module `authenticationSimulation.js`
@@ -94,7 +93,6 @@ export function authenticationSimulation(email = "", password = "") {
 5. Let `handleSubmit` close the modal
    
 ### Unmount and mount the correct buttons - Refactor
-
 - When a user signs in, the sign in buttons should be replaced by the sign out button.
 - Create a component to manage this process.
 
@@ -117,7 +115,6 @@ export function authenticationSimulation(email = "", password = "") {
 4. If `isSignedIn` is `false`, let `button` render `SignInModal`.
 
 ### Communicate the sign-in with the parent component
-
 `<SignInModal onSignIn={setIsSignedIn}/>`
 
 - Callbacks let the child communicate with the parent component.
@@ -129,7 +126,6 @@ export function authenticationSimulation(email = "", password = "") {
 4. Use `onSignIn` in `handleSubmit` when there is a sign-in.
 
 ### Update the parent
-
 `useEffect(componentDidUpdate, [isSignedIn]);`
 
 - Parent components need `componentDidUpdate` to render changes.
@@ -138,3 +134,11 @@ export function authenticationSimulation(email = "", password = "") {
 2. Add the state variable `didMount` and use it with the mount and update phases.
 3. Use `console.log` to verify the phases are properly tracked.
 4. Copy the condition for `isSignedIn` to `componentDidUpdate`.
+
+### Communicate the sign-out with the parent component
+- `SignOutModal` should indicate to the parent component when there is a sign-out
+- 
+    1. In the parent component, let `SignOutModal` have `onSignOut={handleSignOut}`
+    2. Let  `handleSignOut` properly set `isSignedIn` to false
+    3. In `SignOutModal`, add a prop `onSignout `which stores a callback function
+    4. Use `onSignOut` in `handleSubmit` when there is a sign-out
